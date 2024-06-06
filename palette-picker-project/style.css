@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  width: 100%
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -34,8 +44,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -93,7 +101,7 @@ button:focus-visible {
 
 #new-palette-form {
   background-color: #7F7E7E;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -108,8 +116,8 @@ button:focus-visible {
 }
 
 section {
-  display: block;
-  position: static;
+  display: flex;
+  background-color: white;
 }
 
 /* removes border from fieldset */
@@ -135,3 +143,5 @@ fieldset {
 #palette-picker-h1 {
   position: absolute;
 }
+
+cardLi {}

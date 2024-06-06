@@ -15,7 +15,7 @@
     <form action="" id="new-palette-form" aria-labelledby="form-heading">
       <h2 id="palette-form-heading">Add a pallette</h2>
       <label for="palette-title">Palette Title:</label>
-      <input type="text" id="palette-title" name="username" placeholder="" />
+      <input type="text" id="paletteTitle" class="paletteTitle" name="palleteName" placeholder="" />
       <!-- color inputs for the palette picker form -->
       <div id="colors-container">
         <label for="color1">Color #1</label>
@@ -27,18 +27,20 @@
       </div>
       <!-- radio buttons for palette picker form-->
       <fieldset>
-        <section>
-          <legend>Temperature</legend>
-          <input type="radio" value="warm" id="warm" />
-          <label for="warm">Warm</label>
-          <input type="radio" value="neutral" id="neutral" checked />
-          <label for="neutral">Neutral</label>
-          <input type="radio" value="cool" id="cool" />
-          <label for="cool">Cool</label>
+        <legend>Temperature</legend>
+        <input type="radio" value="warm" id="tempearture" />
+        <label for="temperature">Warm</label>
+        <input type="radio" value="neutral" id="temperature" checked />
+        <label for="temperature">Neutral</label>
+        <input type="radio" value="cool" id="temperature" />
+        <label for="temperature">Cool</label>
       </fieldset>
       <button type="submit" id="palette-submit-button">Create the palette</button>
       </fieldset>
     </form>
+    <section id="palette-section">
+
+    </section>
     <div id="app"></div>
     <script type="module" src="./main.js"></script>
   </main>
