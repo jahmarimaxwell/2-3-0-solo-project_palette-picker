@@ -1,5 +1,5 @@
 // importing json into javascript
-import palettes from '/palettes.json' with { type: 'json' };
+import palettes from '../palettes.json' with { type: 'json' };
 // importng functions from another javascript file
 import { handlePaletteSubmit } from './helper-function.js';
 import { preventDefault } from './helper-function.js';
