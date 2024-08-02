@@ -1,4 +1,4 @@
-
+/// updating work
 export const makePaletteCard = (palettes) => {
     const { title, colors, temperature } = palettes;
     console.log({ title, colors, temperature });
