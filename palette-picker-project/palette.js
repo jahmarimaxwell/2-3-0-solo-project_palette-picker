@@ -2,54 +2,69 @@
 export const makePaletteCard = (palettes) => {
     const { title, colors, temperature } = palettes;
     console.log({ title, colors, temperature });
-    const cardContainer = document.getElementById('palette-section');
+    const cardContainer = document.createElement("div");
+    // create attributes for each container to style
+    cardContainer.setAttribute("id", "card-container");
 
-    // create elements
+    const bigCardContainer = document.getElementById('big-card-container');
+    const bodyContainer = document.createElement("div");
+    bodyContainer.setAttribute("id", "body-container");
+
+    // create list item structure for different containers
     const cardLi = document.createElement("li");
-    const titleP = document.createElement("p");
-    // const paletteContainer = document.createElement("div");
+    const titleContainer = document.createElement("p");
+    titleContainer.setAttribute("id", "title-container");
+
     const colorContainer = document.createElement("div");
+    colorContainer.setAttribute("id", "color-container");
+
     const hexContainer = document.createElement("div");
+    hexContainer.setAttribute("id", "hex-container");
 
-    const colorContainer1 = document.createElement("div");
-    const hexContainer1 = document.createElement("div");
+    const color1 = document.createElement("div");
+    const hex1 = document.createElement("div");
 
-    const colorContainer2 = document.createElement("div");
-    const hexContainer2 = document.createElement("div");
+    const color2 = document.createElement("div");
+    const hex2 = document.createElement("div");
 
-    const colorContainer3 = document.createElement("div");
-    const hexContainer3 = document.createElement("div");
+    const color3 = document.createElement("div");
+    const hex3 = document.createElement("div");
 
     const deleteButton = document.createElement("button");
+    deleteButton.setAttribute("id", "delete-button")
     deleteButton.textContent = 'Delete Palette';
-    const temperatureContainer = document.createElement("div");
 
-    //structure elements
-    colorContainer.append(colorContainer1, colorContainer2, colorContainer3);
-    hexContainer.append(hexContainer1, hexContainer2, hexContainer3);
+    const temperatureContainer = document.createElement("div");
+    temperatureContainer.setAttribute("id", "temperature-container")
+
+    // Structure Elements
+    colorContainer.append(color1, color2, color3);
+    hexContainer.append(hex1, hex2, hex3);
+    bodyContainer.append(colorContainer, hexContainer);
 
     cardLi.append(
-        titleP,
-        hexContainer,
-        colorContainer,
-        temperatureContainer,
-        deleteButton
+        titleContainer,
+        bodyContainer,
+        deleteButton,
+        temperatureContainer
     );
     cardContainer.append(cardLi);
+    bigCardContainer.appendChild(cardContainer);
 
-    titleP.textContent = title;
+    titleContainer.textContent = title;
 
-    hexContainer1.textContent = colors[0];
-    hexContainer2.textContent = colors[1];
-    hexContainer3.textContent = colors[2];
+    hex1.textContent = `Copy ${colors[0]}`;
+    hex2.textContent = `Copy ${colors[1]}`;
+    hex3.textContent = `Copy ${colors[2]}`;
 
-    colorContainer1.textContent = 'Color 1';
-    colorContainer2.textContent = 'Color 2';
-    colorContainer3.textContent = 'Color 3';
+    color1.textContent = 'Color 1';
+    color2.textContent = 'Color 2';
+    color3.textContent = 'Color 3';
+    // setting background of each color to the color chosen
+    color1.style.backgroundColor = colors[0];
+    color2.style.backgroundColor = colors[1];
+    color3.style.backgroundColor = colors[2];
 
-    colorContainer1.style.backgroundColor = colors[0];
-    colorContainer2.style.backgroundColor = colors[1];
-    colorContainer3.style.backgroundColor = colors[2];
-
-    temperatureContainer.textContent = temperature[0];
+    temperatureContainer.textContent = temperature;
+    // cardContainer.style.backgroundColor = green;
 }

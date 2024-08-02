@@ -1,17 +1,11 @@
 // importing json into javascript
-import palettes from '/palettes.json' with { type: 'json' };
+import palettes from '../palettes.json' with { type: 'json' };
 // importng functions from another javascript file
 import { handlePaletteSubmit } from './helper-function.js';
 import { preventDefault } from './helper-function.js';
 import { makePaletteCard } from './palette.js';
 
-/*
-Object.keys(palettes).forEach((key) => {
-    let value = palettes[key];
-    console.log(value);
-});
-console.log(palettes)
-*/
+const head = document.querySelector('head');
 
 const displayPalettes = () => {
     palettes.forEach(palette => {

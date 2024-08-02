@@ -17,6 +17,7 @@ export const handlePaletteSubmit = (event) => {
         form.color3.value,
     ];
     const temperature = form.temperature.value;
+
     // empty array 
     let palettes = [];
     const newPalette = { title, colors, temperature };
