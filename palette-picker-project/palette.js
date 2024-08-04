@@ -1,4 +1,6 @@
 /// updating work
+import { deletePalette } from './delete-palette.js';
+
 export const makePaletteCard = (palettes) => {
     const { title, colors, temperature } = palettes;
     console.log({ title, colors, temperature });
@@ -74,5 +76,7 @@ export const makePaletteCard = (palettes) => {
     color3.style.backgroundColor = colors[2];
 
     temperatureContainer.textContent = temperature;
+
+    deletePalette(deleteButton, `card-container`);
     // cardContainer.style.backgroundColor = green;
 }
