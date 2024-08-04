@@ -23,12 +23,15 @@ export const makePaletteCard = (palettes) => {
     hexContainer.setAttribute("id", "hex-container");
 
     const color1 = document.createElement("div");
+    color1.setAttribute("id", "color");
     const hex1 = document.createElement("div");
 
     const color2 = document.createElement("div");
+    color2.setAttribute("id", "color");
     const hex2 = document.createElement("div");
 
     const color3 = document.createElement("div");
+    color3.setAttribute("id", "color");
     const hex3 = document.createElement("div");
 
     const deleteButtonContainer = document.createElement("div");

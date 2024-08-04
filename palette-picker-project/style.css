@@ -110,7 +110,7 @@ button:focus-visible {
 #new-palette-form {
   background-color: #7F7E7E;
   position: relative;
-  margin-top: 230px;
+  margin-top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   /* flex properties for form */
@@ -121,9 +121,10 @@ button:focus-visible {
   justify-content: space-evenly;
 
   align-items: center;
-  width: 400px;
-  height: 450px;
-  border-radius: 10px;
+  width: 450px;
+  height: 550px;
+  border-radius: 25px;
+  padding: 20px;
 }
 
 section {
@@ -146,6 +147,13 @@ fieldset {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: stretch;
+}
+#colors-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
 }
 
 #palette-submit-button {
@@ -193,12 +201,6 @@ li#card-list{
   justify-content: center;
 }
 
-#delete-button-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
 #color-container {
   display: flex;
   flex-direction: column;
@@ -206,6 +208,14 @@ li#card-list{
   text-align: center;
 }
 
+#delete-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
 #temperature-container {
   text-align: center;
 }
+
+/* Making sure every container within palette is Centered */
