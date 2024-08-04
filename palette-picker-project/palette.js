@@ -12,6 +12,7 @@ export const makePaletteCard = (palettes) => {
 
     // create list item structure for different containers
     const cardLi = document.createElement("li");
+    cardLi.setAttribute("id", "card-list");
     const titleContainer = document.createElement("p");
     titleContainer.setAttribute("id", "title-container");
 
@@ -30,6 +31,8 @@ export const makePaletteCard = (palettes) => {
     const color3 = document.createElement("div");
     const hex3 = document.createElement("div");
 
+    const deleteButtonContainer = document.createElement("div");
+    deleteButtonContainer.setAttribute("id", "delete-button-container");
     const deleteButton = document.createElement("button");
     deleteButton.setAttribute("id", "delete-button")
     deleteButton.textContent = 'Delete Palette';
@@ -41,13 +44,15 @@ export const makePaletteCard = (palettes) => {
     colorContainer.append(color1, color2, color3);
     hexContainer.append(hex1, hex2, hex3);
     bodyContainer.append(colorContainer, hexContainer);
+    deleteButtonContainer.append(deleteButton);
 
     cardLi.append(
         titleContainer,
         bodyContainer,
-        deleteButton,
+        deleteButtonContainer,
         temperatureContainer
     );
+
     cardContainer.append(cardLi);
     bigCardContainer.appendChild(cardContainer);
 

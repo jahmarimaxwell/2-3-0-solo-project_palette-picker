@@ -165,9 +165,11 @@ fieldset {
   margin-bottom: 30px;
 }
 
-li {
+li#card-list{
   display: block;
   align-content: center;
+  width: 100%;
+  /* spread the list's area to the whole card container */
 }
 
 #card-container {
@@ -188,14 +190,13 @@ li {
 
 #body-container {
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: center;
 }
 
-#delete-button {
-  align-items: center;
+#delete-button-container {
+  display: flex;
+  justify-content: center;
   margin: 20px;
-  margin-left: 25px;
 }
 
 #color-container {
