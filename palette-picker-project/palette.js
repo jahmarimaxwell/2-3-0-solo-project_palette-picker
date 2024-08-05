@@ -57,12 +57,12 @@ export const makePaletteCard = (palettes) => {
         singleColorContainer.setAttribute("id", "single-color-container");
         singleColorContainer.append(colorDiv);
 
-        return { colorDiv, hexDiv };
+        return { singleColorContainer, hexDiv };
     };
 
-    const { colorDiv: color1, hexDiv: hex1 } = createColorDiv(colors[0], colors[0]);
-    const { colorDiv: color2, hexDiv: hex2 } = createColorDiv(colors[1], colors[1]);
-    const { colorDiv: color3, hexDiv: hex3 } = createColorDiv(colors[2], colors[2]);
+    const { singleColorContainer: color1, hexDiv: hex1 } = createColorDiv(colors[0], colors[0]);
+    const { singleColorContainer: color2, hexDiv: hex2 } = createColorDiv(colors[1], colors[1]);
+    const { singleColorContainer: color3, hexDiv: hex3 } = createColorDiv(colors[2], colors[2]);
 
     const deleteButtonContainer = document.createElement("div");
     deleteButtonContainer.setAttribute("id", "delete-button-container");
