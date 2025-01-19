@@ -31,6 +31,24 @@ export const handlePaletteSubmit = (event) => {
     form.reset();
     }
 }
-
-// Add event listener only once for 'submit'
+export const deletePalette = (deleteButton, cardContainer) => {
+    deleteButton.addEventListener('click', () => {
+        const paletteCard = document.getElementById(cardContainer);
+        if (paletteCard) {
+            paletteCard.remove();
+        }
+    });
+}
+export const copyToClipboard = (element, hexCode) => {
+    element.addEventListener('click', () => {
+        navigator.clipboard.writeText(hexCode)
+            .then(() => {
+                console.log(`Copied ${hexCode} to clipboard`);
+                alert(`Copied ${hexCode} to clipboard`);
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+    });
+}
 form.addEventListener('submit', handlePaletteSubmit);
