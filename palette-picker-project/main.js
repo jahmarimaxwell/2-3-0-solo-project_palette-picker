@@ -2,7 +2,6 @@
 import palettes from '../palettes.json' with { type: 'json' };
 // importng functions from another javascript file
 import { handlePaletteSubmit } from './helper-function.js';
-import { preventDefault } from './helper-function.js';
 import { makePaletteCard } from './palette.js';
 // import { deleteButtonAction } from './delete-palette.js';
 
@@ -19,9 +18,7 @@ window.onload = displayPalettes;
 
 const main = () => {
     handlePaletteSubmit();
-    preventDefault();
     makePaletteCard();
-    displayPalettes();
   // deleteButtonAction();
 }
 

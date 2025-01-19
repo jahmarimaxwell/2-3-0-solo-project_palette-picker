@@ -2,6 +2,7 @@
 import { deletePalette } from './delete-palette.js';
 
 export const makePaletteCard = (palettes) => {
+    if (palettes) {
     const { title, colors, temperature } = palettes;
     console.log({ title, colors, temperature });
     const cardContainer = document.createElement("div");
@@ -79,4 +80,5 @@ export const makePaletteCard = (palettes) => {
 
     deletePalette(deleteButton, `card-container`);
     // cardContainer.style.backgroundColor = green;
+    }
 }
